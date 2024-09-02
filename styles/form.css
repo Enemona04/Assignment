@@ -1,0 +1,248 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left-section{
+    background-color: #fff6ed;
+    max-width: 50%;
+    margin-left: 10px;
+    min-height: 100vh;
+}
+.left-section > img{
+    max-width: 100%;
+    width: 300px;
+    padding: 60px 40px 0 40px;
+}
+.icons-div{
+    text-align: center;
+}
+.icons-div a img{
+    width: 18px;
+    margin-left: 6px;
+    padding: 10px 0 15px 0;
+}
+.learn-hassle p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 0.5;
+}
+footer{
+    text-align: center;
+    font-size: 14px;
+}
+footer a{
+    color: #808080;
+    text-decoration: none;
+}
+footer p{
+    color: #000000;
+    font-weight: bold;
+}
+
+
+.right-section{
+    max-width: 50%;
+    width: 800px;
+    margin-left: 30px;
+}
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 20px;
+}
+.navbar ul a{
+    font-weight: bolder;
+    color: #0b1e4b;
+}
+.navbar ul a:hover{
+    color: #ff4500;
+}
+.navbar ul a:active{
+    background-color: #ffa500;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+aside{
+    text-align: end;
+    margin:25px 40px 0 0;
+    font-weight: bold;
+}
+aside a{
+    text-decoration: none;
+}
+aside a:hover{
+    text-decoration: underline 2px #ff4500;
+    color: #008000;
+}
+.name-div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+h1{
+    color: #0b1e4b;
+}
+h2{
+    font-size: 15px;
+    font-weight: 400;
+    color: #85888d;
+    margin-top: -10px;
+}
+.firstname input, .lastname input{
+    height: 55px;
+    width: 250px;
+    margin: 10px 20px 0 0;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.firstname ::placeholder, 
+.lastname ::placeholder{
+    color: #85888d;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.gender-dob{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#gender, .dob input{
+    height: 55px;
+    width: 250px;
+    margin: 10px 20px 0 0;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.email-phone{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.email input, .phone input{
+    height: 55px;
+    width: 250px;
+    margin: 10px 20px 0 0;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.email ::placeholder, .phone ::placeholder{
+    padding-left: 10px;
+    color: #85888d;
+    font-size: 16px;
+}
+.country-state{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#country{
+    padding-left: 10px;
+    font-size: 14px;
+    color: #85888d;
+}
+#country, .state input{
+    height: 55px;
+    width: 250px;
+    margin: 10px 20px 0 0;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.state input::placeholder{
+    padding-left: 10px;
+    color: #85888d;
+    font-size: 16px;
+}
+.password-confirm{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.password input, .confirm input{
+    height: 55px;
+    width: 250px;
+    margin: 10px 20px 0 0;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.password ::placeholder, .confirm ::placeholder{
+    padding-left: 10px;
+    color: #85888d;
+    font-size: 16px;
+}
+.form-footer{
+    list-style: none;
+    margin-top: 20px;
+    color:  #85888d;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.form-footer li a{
+    color: #2054d2;
+    font-size: 14px;
+}
+button{
+    margin: 30px 0 20px 0 ;
+    width: 540px;
+    height: 55px;
+    background-color: #6a6ff5;;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+@media(max-width:767px) and (max-width:1023px){
+    .left-section{
+        display: none;
+        padding-right: 30px;
+    }
+    .left-section > img{
+        width: 150px;
+        margin-left: -35px;
+    }
+    .learn-hassle p{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        line-height: 0.8;
+    }
+    .right-section{
+        max-width: 80%;
+    }
+    .name-div, .gender-dob, .email-phone,
+    .country-state, .password-confirm{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        width: 387px;
+    }
+    #country, #gender,.firstname input, .lastname input, .dob input,
+    .email input, .phone input, .state input, .password input
+    ,.confirm input{
+        width: 350px;
+    }
+}
