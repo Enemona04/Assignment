@@ -7,19 +7,21 @@
     <title>Media Page</title>
 </head>
 <body>
-    <div id="container">
+    <div id="main-container">
         <nav id="navbar">
-            <ul class="nav-list">
-                <li><a href="./index.html">About me</a></li>
-                <li><a href="./form.html">Form.html</a></li>
-                <li><a href="./table.html">Table.html</a></li>
+            <ul>
+                <li><a href="./index.html">about</a></li>
+                <li><a href="./form.html">form</a></li>
+                <li><a href="./table.html">courses</a></li>
             </ul>
         </nav>
+        
         <h1>Hello, Welcome!</h1>
+
         <section class="section-one">
-           <div class="powerful-message">
-                <ul>
-                    <h2>Some powerful message about me!!</h2>
+            <div class="h2-div"><h2>Some powerful message about me!!</h2></div>
+            <div class="story-picture">
+                <ul class="story">
                     <li>"My story is one of triumph, shaped by determination and a refusal to be defined by limitations."</li>
                     <li>"I'm a work in progress, but I'm proud of the strength, wisdom, and beauty I've cultivated along the way."</li>
                     <li>"I won't be held back by fear or doubt - I'll rise, I'll shine, and I'll make my mark."</li>
@@ -27,32 +29,37 @@
                     <li>"I'm a fusion of flaws and strengths, and I'm embracing the beauty of my authenticity."</li>
                 </ul>
                 <picture>
-                    <source
-                    media="(min-width: 800px)"
-                    srcset="./Images & Icons/me-360.jpg 360w,
-                            ./Images & Icons/me-720.jpg 720w,
-                            ./Images & Icons/me-1440.jpg 1440w"
-                    sizes="33.3vw">
-                    <source
-                    srcset="./Images & Icons/me-720.jpg 2x,
-                            ./Images & Icons/me-360.jpg">
-                    <img src="./Images & Icons/me.jpg" alt="Picture of me coding!" width="250px">
+                    <div class="pics">
+                            <source
+                        media="(min-width: 800px)"
+                        srcset="./Images & Icons/me-360.jpg 360w,
+                                ./Images & Icons/me-720.jpg 720w,
+                                ./Images & Icons/me-1440.jpg 1440w"
+                        sizes="33.3vw">
+                        <source
+                        srcset="./Images & Icons/me-720.jpg 2x,
+                                ./Images & Icons/me-360.jpg">
+                        <img src="./Images & Icons/me.jpg" alt="Picture of me coding!" width="250px">
+                    </div>
                     <figcaption>Picture of me coding!</figcaption>
                 </picture>
+            </div>
+        </section>
+        <hr>
+        <section class="section-two">
+            <div class="mamba">
+                <p>"Below is an inspiring video of one of my favorite athlete, <span>Lt. Kobe Byrant</span>."</p>
+            </div>
+           <div class="video">
+                <video
+                   src="./Images & Icons/RIP Mamba.mp4" controls width="300px">
+                </video>
+           </div>
+           <div class="small">
+                <small>~RIP Mamba, August 23, 1978 - January 26, 2020.</small>
            </div>
         </section>
-        <section class="section-two">
-            <p>
-                Below is a video of one of my favorite 
-                athlete, Lt. Kobe Byrant. Talking about the importance of 
-                taking the small steps everyday. It doesn't have to be something so big, but it can be something 
-                significant to you and in line with your goals. 
-            </p>
-            <video class="video"
-              src="./Images & Icons/RIP Mamba.mp4" controls width="300px">
-            </video><br>
-            <small><br> ~RIP Mamba, August 23, 1978 - January 26, 2020.</small>
-        </section>
+
         <section class="section-three">
             <h3>Audio of Mamba speaking!!</h3>
             <audio 

@@ -30,62 +30,73 @@
             <footer>
                 <a href="#">Tel: 0800ALTSCHOOL</a>
                 <p>&copy;2024 AltSchool Africa. All rights reserved.</p>
+                <div class="copyright">&#169;2024, Enemona.</div>
             </footer>
         </section>
 
         <section class="right-section">
+
             <nav class="navbar">
                 <ul>
-                    <li><a href="./index.html">About me</a></li>
-                    <li><a href="./table.html">Table.html</a></li>
-                    <li><a href="./media.html">Media.html</a></li>
+                    <li><a href="./index.html">about</a></li>
+                    <li><a href="./table.html">courses</a></li>
+                    <li><a href="./media.html">media</a></li>
                 </ul>
             </nav>
-            <aside> Already an AltSchooler? <a href="https://portal.altschoolafrica.com/auth/login">Sign In!</a></aside>
+
+            <div class="school">
+                <img src="./Images & Icons/alt.png" alt="" width="70">
+            </div>
+
+            <aside> 
+                Already an AltSchooler? <a href="https://portal.altschoolafrica.com/auth/login">Sign In!</a>
+            </aside>
+
             <h1>Signup</h1>
             <h2>Take the next steps to apply at AltSchool Africa</h2>
+
             <form action="#">
-                <div class="name-div">
-                    <div class="firstname">
+                <div class="first-lastname">
+                    <div class="name">
                         <label for="fn">First Name</label><br>
-                        <input type="text" id="fn" placeholder="Enter first name">
+                        <input type="text" id="fn" placeholder="Enter first name" required>
                     </div>
-                    <div class="lastname">
-                        <label for="fn">Last Name</label><br>
-                        <input type="text" id="fn" placeholder="Enter last name">
+                    <div class="name">
+                        <label for="ln">Last Name</label><br>
+                        <input type="text" id="ln" placeholder="Enter last name" required>
                     </div>
                 </div>
 
-                <div class="gender-dob">
-                    <div class="gender">
+                <div id="gender-dob">
+                    <div class="gender-option">
                         <label for="gender">Gender</label><br>
-                        <select name="gender" id="gender">
-                            <option value="">Select gender</option>
+                        <select name="gender" id="gender" required>
+                            <option value=""selected>Select gender</option>
                             <option value="">Male</option>
                             <option value="">Female</option>
                         </select>
                     </div>
                     <div class="dob">
-                        <label for="dob">Date of Birth</label><br>
-                        <input type="date">
+                        <label for="birthday">Date of Birth</label><br>
+                        <input type="date" id="birthday" required>
                     </div>
                 </div>
 
                 <div class="email-phone">
-                    <div class="email">
+                    <div class="mail">
                         <label for="email">Email address</label><br>
-                        <input type="text" id="email" placeholder="Enter email address">
+                        <input type="text" id="email" placeholder="Enter email address" required>
                     </div>
                     <div class="phone">
-                        <label for="phone">Phone number</label><br>
-                        <input type="text" id="phone" placeholder="08154387000">
+                        <label for="mobile-phone">Phone number</label><br>
+                        <input type="text" id="mobile-phone" placeholder="08154387000" required>
                     </div>
                 </div>
 
-                <div class="country-state">
-                    <div class="country">
+                <div id="country-state">
+                    <div class="country-country">
                         <label for="country">Country</label><br>
-                        <select name="country" id="country">
+                        <select name="country" id="country" required>
                             <option selected>Select your country</option>
                             <option>Afghanistan</option>
                             <option>Albania</option>
@@ -276,28 +287,48 @@
                             <option>Zimbabwe</option>
                         </select>
                     </div>
-                    <div class="state">
-                        <label for="state">State/City of Residence</label><br>
-                        <input type="text" id="state" placeholder="Enter your state of residence">
+                    <div class="states">
+                        <label for="residence">State/City of Residence</label><br>
+                        <input type="text" id="residence" placeholder="Enter your state of residence" required>
                     </div>
                 </div>
 
-                <div class="password-confirm">
-                    <div class="password">
-                        <label for="password">Password</label><br>
-                        <input type="password" id="password" placeholder="Enter passowrd">
-                     </div>
-                     <div class="confirm">
-                         <label for="confirm-password"> Confirm Password</label><br>
-                         <input type="confirm password" id="confirm-password" placeholder="Confirm password">
-                     </div>
+                <div id="about-us">
+                   <div class="hear">
+                        <label for="about">How did you hear about us?</label><br>
+                        <select name="about" id="about" required>
+                            <option value=""selected>Select channel</option>
+                            <option value="">Twitter</option>
+                            <option value="">Facebook</option>
+                            <option value="">Linkedin</option>
+                            <option value="">Youtube</option>
+                            <option value="">Friend</option>
+                            <option value="">WhatsApp</option>
+                            <option value="">Instagram</option>
+                            <option value="">Bill Board</option>
+                        </select>
+                   </div>
                 </div>
-                <ul class="form-footer">
-                    <li>By clicking continue, I agree to <a href="#">Terms</a> of Use and acknowledge</li>
-                    <li>that I</li>
-                    <li>have read the <a href="#">Privacy Policy.</a></li>
-                </ul>
-                <button>Submit &#8594;</button>
+
+                <div class="password-div">
+                    <div class="first-password">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" placeholder="Enter passowrd" required>
+                     </div>
+                     <div class="second-password">
+                         <label for="confirm-password"> Confirm Password</label><br>
+                         <input type="confirm password" id="confirm-password" placeholder="Confirm password" required>
+                     </div>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <div>
+                        By clicking continue, I agree to <a href="#">Terms of Use</a> and acknowledge
+                        that I have read the <a href="#">Privacy Policy.</a>
+                    </div>
+                </div>
+                <button>Submit&#8594;</button>
+                <div class="copy">&#169;2024, Enemona.</div>
             </form>
         </section>
     </main>

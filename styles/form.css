@@ -1,248 +1,474 @@
-body{
+/* MOBILE WORKFLOW: BASE CSS*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: sans-serif;
 }
+
 #main-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: 100%;
+    width: 100%;
 }
+
+
+/* LEFT SECTION  */
 .left-section{
-    background-color: #fff6ed;
-    max-width: 50%;
-    margin-left: 10px;
-    min-height: 100vh;
-}
-.left-section > img{
-    max-width: 100%;
-    width: 300px;
-    padding: 60px 40px 0 40px;
-}
-.icons-div{
-    text-align: center;
-}
-.icons-div a img{
-    width: 18px;
-    margin-left: 6px;
-    padding: 10px 0 15px 0;
-}
-.learn-hassle p{
-    text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-    line-height: 0.5;
-}
-footer{
-    text-align: center;
-    font-size: 14px;
-}
-footer a{
-    color: #808080;
-    text-decoration: none;
-}
-footer p{
-    color: #000000;
-    font-weight: bold;
+    display: none;
 }
 
-
+/* RIGHT SECTION */
 .right-section{
-    max-width: 50%;
-    width: 800px;
-    margin-left: 30px;
+   width: 100%;
+   padding:0 2rem;
 }
-.navbar ul{
+
+/* NAVBAR SECTION */
+.navbar, ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 0.9rem 0 0 0;
     list-style: none;
-    padding-top: 20px;
-}
-.navbar ul a{
-    font-weight: bolder;
-    color: #0b1e4b;
-}
-.navbar ul a:hover{
-    color: #ff4500;
-}
-.navbar ul a:active{
-    background-color: #ffa500;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-}
-aside{
-    text-align: end;
-    margin:25px 40px 0 0;
+    text-decoration: none;
     font-weight: bold;
 }
+ul li a{
+    text-decoration: none;
+    color: #0b1e4b;
+}
+
+.navbar ul a:hover{
+    color: #ff4500;
+    text-decoration: underline;
+}
+.navbar ul a:active{
+    color: #0000ff;
+}
+
+.right-section aside{
+    text-align: end;
+    margin: 1rem 0.09rem 0 0;
+    font-weight: bold;
+}
+
 aside a{
     text-decoration: none;
 }
+
 aside a:hover{
-    text-decoration: underline 2px #ff4500;
-    color: #008000;
+    color: #ff4500;
 }
-.name-div{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+
+.school{
+    text-align: center;
+    margin-top: 0.07rem;
 }
+
 h1{
     color: #0b1e4b;
+    font-weight: bold;
+    margin-top: 1rem;
 }
+
+
 h2{
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 1rem;
     color: #85888d;
-    margin-top: -10px;
+    margin-top: 1rem;
 }
-.firstname input, .lastname input{
-    height: 55px;
-    width: 250px;
-    margin: 10px 20px 0 0;
+
+/* FORM SECTION */
+form{
+    width: 100%;
+}
+
+.name{
+    margin-top: 2rem;
+}
+
+.name input{
+    width: 100%;
+    margin-top: 1rem;
     background-color: #f5f5f5;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     outline: none;
-}
-.firstname ::placeholder, 
-.lastname ::placeholder{
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
     color: #85888d;
-    padding-left: 10px;
-    font-size: 16px;
 }
-.gender-dob{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+
+.name input:hover{
+    border:0.05rem solid #6a6ff5;
 }
-#gender, .dob input{
-    height: 55px;
-    width: 250px;
-    margin: 10px 20px 0 0;
+
+.name input:focus{
+    border: 0.08rem solid #0000ff;
+}
+
+.gender-option{
+    margin-top: 2rem;
+}
+
+#gender{
+    width: 100%;
+    margin-top: 1rem;
     background-color: #f5f5f5;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     outline: none;
 }
-.email-phone{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+
+#gender:nth-of-type(1){
+    color: #85888d;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
 }
-.email input, .phone input{
-    height: 55px;
-    width: 250px;
-    margin: 10px 20px 0 0;
+
+#gender option{
+   background-color:#f5f5f5;
+    color: #000000;
+    font-size: 1rem;
+}
+
+#gender:focus{
+    border: 0.08rem solid #0000ff;
+}
+
+.dob{
+    margin-top: 2rem;
+}
+
+.dob input{
+    width: 100%;
+    margin-top: 1rem;
     background-color: #f5f5f5;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     outline: none;
 }
-.email ::placeholder, .phone ::placeholder{
-    padding-left: 10px;
+
+.dob input[type="date"]{
     color: #85888d;
-    font-size: 16px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1.5rem 1.2rem
 }
-.country-state{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+
+.dob input:hover{
+    border:0.05rem solid #6a6ff5;
 }
+
+.dob:focus{
+    border: 0.08rem solid #0000ff;
+}
+
+.mail{
+    margin-top: 2rem;
+}
+
+.mail input{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.7rem;
+    outline: none;
+    padding: 1.5rem 1.2rem;
+    color: #85888d;
+    font-size: 1rem;
+}
+
+.mail input:hover{
+    border:0.05rem solid #6a6ff5;
+}
+
+.mail input:focus{
+    border: 0.08rem solid #0000ff;
+}
+
+.phone{
+    margin-top: 2rem;
+}
+
+.phone input{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.7rem;
+    outline: none;
+    padding: 1.5rem 1.2rem;
+    color: #85888d;
+    font-size: 1rem;
+}
+
+.phone input:hover{
+    border:0.05rem solid #6a6ff5;
+}
+
+
+.phone input:focus{
+    border: 0.08rem solid #0000ff;
+}
+
+.country-country{
+    margin-top: 2rem;
+}
+
 #country{
-    padding-left: 10px;
-    font-size: 14px;
-    color: #85888d;
-}
-#country, .state input{
-    height: 55px;
-    width: 250px;
-    margin: 10px 20px 0 0;
+    width: 100%;
+    margin-top: 1rem;
     background-color: #f5f5f5;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     outline: none;
 }
-.state input::placeholder{
-    padding-left: 10px;
+
+#country:nth-of-type(1){
     color: #85888d;
-    font-size: 16px;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
 }
-.password-confirm{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+
+#country:focus {
+    border: 0.08rem solid #0000ff;
 }
-.password input, .confirm input{
-    height: 55px;
-    width: 250px;
-    margin: 10px 20px 0 0;
+
+#country option{
+    background-color:#f5f5f5;
+     color: #000000;
+     font-size: 1rem;
+ }
+
+.states{
+    margin-top: 2rem;
+}
+
+.states input{
+    width: 100%;
+    margin-top: 1rem;
     background-color: #f5f5f5;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.7rem;
+    outline: none;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
+    color: #85888d;
+}
+
+.states input:hover{
+    border:0.05rem solid #6a6ff5;
+}
+
+.states input:focus{
+    border:0.08rem solid  #0000ff;
+}
+
+.hear{
+    margin-top: 2rem;
+}
+#about{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.7rem;
     outline: none;
 }
-.password ::placeholder, .confirm ::placeholder{
-    padding-left: 10px;
+
+#about:nth-of-type(1){
     color: #85888d;
-    font-size: 16px;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
 }
+
+#about:focus{
+    border:0.08rem solid  #0000ff;
+}
+
+#about option{
+    background-color:#f5f5f5;
+     color: #000000;
+     font-size: 1rem;
+ }
+
+ .first-password{
+    margin-top: 2rem;
+ }
+
+ .first-password input{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.7rem;
+    outline: none;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
+    color: #85888d;
+}
+
+.first-password input:hover{
+    border:0.05rem solid #6a6ff5;
+}
+
+.first-password input:focus{
+    border:0.08rem solid  #0000ff;
+}
+
+.second-password{
+    margin-top: 2rem;
+ }
+
+ .second-password input{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.7rem;
+    outline: none;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
+    color: #85888d;
+}
+
+.second-password input:hover{
+    border:0.05rem solid #6a6ff5;
+}
+
+.second-password input:focus{
+    border:0.08rem solid  #0000ff;
+}
+
 .form-footer{
-    list-style: none;
-    margin-top: 20px;
-    color:  #85888d;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    margin-top: 2rem;
+    width: 100%;
 }
-.form-footer li a{
-    color: #2054d2;
-    font-size: 14px;
+
+.form-footer a{
+    text-decoration: none;
+    color: #6a6ff5;
 }
+
 button{
-    margin: 30px 0 20px 0 ;
-    width: 540px;
-    height: 55px;
-    background-color: #6a6ff5;;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.5rem 1.2rem;
+    font-size: 1rem;
+    background-color: #6a6ff5;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.7rem;
+    font-weight: bold;
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 2rem 0;
+    color: #ff0000;
     font-weight: bold;
 }
 
 
-@media(max-width:767px) and (max-width:1023px){
-    .left-section{
-        display: none;
-        padding-right: 30px;
-    }
-    .left-section > img{
-        width: 150px;
-        margin-left: -35px;
-    }
-    .learn-hassle p{
-        text-align: center;
-        font-size: 20px;
-        font-weight: bolder;
-        line-height: 0.8;
-    }
-    .right-section{
-        max-width: 80%;
-    }
-    .name-div, .gender-dob, .email-phone,
-    .country-state, .password-confirm{
+
+
+/* MEDIA QUERIES FOR TABLET*/
+
+@media (min-width:768px) {
+    .first-lastname,.email-phone,.password-div{
         display: flex;
-        flex-direction: column;
+        gap: 1rem;
     }
-    button{
-        width: 387px;
+    #gender-dob,#country-state{
+        display: flex;
+        gap: 1rem;
     }
-    #country, #gender,.firstname input, .lastname input, .dob input,
-    .email input, .phone input, .state input, .password input
-    ,.confirm input{
-        width: 350px;
+    .name,.mail,.phone,.first-password,.second-password,
+    .states,.dob,.country-country,.gender-option{
+        width: 100%;
     }
 }
+
+/* MEDIA QUERIES FOR LAPTOP */
+
+@media (min-width:1024px){
+    .left-section{
+        display: block;
+        background-color: #fff6ed;
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    .left-section > img{
+        width: 100%;
+        max-width: 70%;
+        margin: 2rem auto 1rem auto;
+    }
+    .school{
+        display: none;
+    }
+    .learn-hassle p{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    .icons-div {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .icons-div img{
+        width: 1rem;
+        margin: 0.5rem 0;
+    }
+    .copyright{
+        display: flex;
+        justify-content: left;
+        margin: 1rem 2rem;
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .copy{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        font-size: 0.875rem;
+    }
+    
+    footer a{
+        color: #808080;
+        text-decoration: none;
+        margin: 0.2rem 0;
+    }
+    
+    footer p{
+        color: #000000;
+        font-weight: bold;
+        margin: 0.2rem 0;
+    }
+    .right-section{
+        width: 55%;
+        position: absolute;
+        right: 0;
+        top: 0;
+     }
+    }
+
